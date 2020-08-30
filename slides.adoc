@@ -1,0 +1,21 @@
+= Status Quo
+
+Long feedback loops or low fidelity evaluations (whole file or nothing)
+
+= Conjure + Fennel + Aniseed
+
+Using Fennel gives us macros and structural editing
+
+= Ubiquity
+
+I use this for dotfiles and plugins + same UX for day to day work in Clojure
+
+= Language and Performance
+
+Lua + LuaJIT > VimL in speed and language design (in my opinion)
+
+= Going to School
+
+----
+curl -fL conjure.fun/school | sh
+----

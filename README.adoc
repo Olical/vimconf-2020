@@ -1,3 +1,17 @@
 = https://www.vimconf.live/[VimConf 2020]
 
-TODO: Everything.
+== Conversational Software Development: What, Why and How
+
+A journey into interactive Lisp evaluation for Neovim dotfiles and plugins as well as Clojure and Janet projects. Finish up with an interactive Conjure tutorial (requires curl and an up to date nvim) that gets you evaluating just like me within seconds! 
+
+== Initial thoughts
+
+ * Have slides, no slide plugin, let's write it
+ * Fennel+Aniseed > VimL
+ * *live coding intensifies*
+ * Slides!
+ ** Status quo: Long feedback loops or low fidelity evaluations (whole file or nothing)
+ ** Ubiquity: I use this for dotfiles and plugins + same UX for day to day work in Clojure
+ ** Lua + LuaJIT > VimL in speed and language design (in my opinion)
+ ** Using Fennel gives us macros and structural editing
+ ** School!
