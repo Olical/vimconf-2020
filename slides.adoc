@@ -1,21 +1,104 @@
-= Status Quo
+= Status Quo 🤔
 
-Long feedback loops or low fidelity evaluations (whole file or nothing)
+ * Change your VimL, restart Neovim.
+   Kind of slow and disruptive.
 
-= Conjure + Fennel + Aniseed
+ * Evaluate an entire file.
+   Low fidelity!
+   Requires if statements to prevent double execution of some code.
 
-Using Fennel gives us macros and structural editing
+ * Evaluate an individual expression.
+   Out of context, you can't see hidden state.
+   Only global things can be interacted with.
+
+ * VimL...
+   I'm not smart enough to write interesting things with it.
+
+____
+I would say that VimL is like the PHP of editor scripting languages. It's by no
+means a useless language, but the more you work with it, the more you find
+yourself fighting against the countless quirks of the language.
+- /u/Lokaltog on reddit
+____
+
+It's usable, people make great things.
+
+But we can do better.
+
+= Conjure + Aniseed (Fennel) 🧙
+
+ * Fennel https://fennel-lang.org/
+   Macros! Structural editing! Consistent syntax!
+   Feels like Clojure if that floats your boat.
+
+ * Lua
+   Don't have to see it, but we get LuaJIT levels of performance 😍
+   Have access to any Lua library of snippet from around the internet.
+
+ * Aniseed https://github.com/Olical/aniseed
+   Bridges the gap between Fennel and Neovim.
+   Adds a small Clojure like standard library.
+   Built in test suite (runs in CI!).
+
+ * Conjure https://github.com/Olical/conjure
+   Evaluation of symbols, forms, buffers, files and more!
+   Support for Aniseed, Janet and Clojure with a consistent UX.
+   More languages in the future, including Common Lisp and Scheme.
+   Non-Lisp languages when tree-sitter is normal in Neovim.
+
+ * Better language (subjective-ish)
+ * Faster runtime (LuaJIT FTW)
+ * Minuscule feedback loop
 
 = Ubiquity
 
-I use this for dotfiles and plugins + same UX for day to day work in Clojure
+ * Plugins
+   At compile time or runtime as a library.
+   Lua at rest, end users never actually touch Fennel.
+
+ * Dotfiles
+   Transparently compiled and evaluated, again, Lua at rest.
+   https://github.com/Olical/dotfiles
+
+ * Local directory configuration
+   Just like vim-localvimrc, but Fennel.
+   Same as dotfiles, Lua at rest, compiled when required.
+   https://github.com/Olical/nvim-local-fennel
+
+Use it for anything!
+
+1-2 lines of VimL just to load the compiled Lua output.
 
 = Language and Performance
 
-Lua + LuaJIT > VimL in speed and language design (in my opinion)
+ * LuaJIT is sometimes even on par with C! (not always)
+   https://www.quora.com/Why-is-Lua-so-fast (Munchausen numbers)
+
+     22.29s C
+     23.29s Luajit
+     26.33s PyPy
+     54.30s Java
+     92.94s NodeJS
+     159.93s Lua
+     416.55s Python
+
+ * Vim 9+ may be faster?
+   Requires syntax that won't be backwards compatible though.
+
+ * VimL is a DSL (has benefits but I find it awkward for anything interesting).
+   Fennel lets you design any DSL you want through macros.
+   Lua is a really neat general purpose language.
+
+ * LuaJIT is an absolute marvel of engineering.
+ * Lua is so small it's hard to find a fault in it.
+ * Fennel let's us extend it where it suits us.
 
 = Going to School
 
 ----
 curl -fL conjure.fun/school | sh
 ----
+
+Try it out with me!
+
+Questions? Let's talk about it!
