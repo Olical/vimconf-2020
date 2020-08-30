@@ -86,21 +86,6 @@ do
   _0_0["aniseed/locals"]["display"] = v_0_
   display = v_0_
 end
-local init = nil
-do
-  local v_0_ = nil
-  do
-    local v_0_0 = nil
-    local function init0()
-      return nvim.ex.command_("-nargs=1", "-complete=file", "KKSlider", "lua", "require('kkslider.main')['open-slides'](<q-args>)")
-    end
-    v_0_0 = init0
-    _0_0["init"] = v_0_0
-    v_0_ = v_0_0
-  end
-  _0_0["aniseed/locals"]["init"] = v_0_
-  init = v_0_
-end
 local parse_slides = nil
 do
   local v_0_ = nil
@@ -215,5 +200,20 @@ do
   end
   _0_0["aniseed/locals"]["open-slides"] = v_0_
   open_slides = v_0_
+end
+local init = nil
+do
+  local v_0_ = nil
+  do
+    local v_0_0 = nil
+    local function init0()
+      return nvim.ex.command_("-nargs=1", "-complete=file", "KKSlider", "lua", "require('kkslider.main')['open-slides'](<q-args>)")
+    end
+    v_0_0 = init0
+    _0_0["init"] = v_0_0
+    v_0_ = v_0_0
+  end
+  _0_0["aniseed/locals"]["init"] = v_0_
+  init = v_0_
 end
 return nil

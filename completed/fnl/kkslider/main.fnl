@@ -23,11 +23,6 @@
 (defn display [lines]
   (nvim.buf_set_lines (upsert-buf) 0 -1 false lines))
 
-(defn init []
-  (nvim.ex.command_
-    :-nargs=1 :-complete=file :KKSlider :lua
-    "require('kkslider.main')['open-slides'](<q-args>)"))
-
 (defn parse-slides [src]
   (var current nil)
   (var acc [])
@@ -72,3 +67,8 @@
         (a.assoc state :slides (parse-slides src))
         (next-slide))
       (echoerr "Couldn't load" file))))
+
+(defn init []
+  (nvim.ex.command_
+    :-nargs=1 :-complete=file :KKSlider :lua
+    "require('kkslider.main')['open-slides'](<q-args>)"))
