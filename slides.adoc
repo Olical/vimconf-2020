@@ -102,3 +102,7 @@ curl -fL conjure.fun/school | sh
 Try it out with me!
 
 Questions? Let's talk about it!
+
+ * @OliverCaldwell on twitter
+ * https://oli.me.uk/
+ * https://github.com/Olical
