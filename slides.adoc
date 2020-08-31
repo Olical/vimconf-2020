@@ -112,3 +112,12 @@ Questions? Let's talk about it!
  * @OliverCaldwell on twitter
  * https://oli.me.uk/
  * https://github.com/Olical
+
+____
+I never perfectly understand the problem while I'm solving it. My code
+materializes my understanding, so it's never perfect either. As my
+understanding improves, the code follows it. For me, it's important that the
+programming language supports that fluidity. 
+- @draganrocks on twitter
+____
+
