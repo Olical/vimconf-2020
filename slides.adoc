@@ -1,5 +1,7 @@
 = Status Quo 🤔
 
+What options do we have?
+
  * Change your VimL, restart Neovim.
    Kind of slow and disruptive.
 
@@ -27,6 +29,8 @@ But we can do better.
 
 = Conjure + Aniseed (Fennel) 🧙
 
+What do my tools give you?
+
  * Fennel https://fennel-lang.org/
    Macros! Structural editing! Consistent syntax!
    Feels like Clojure if that floats your boat.
@@ -51,6 +55,8 @@ But we can do better.
  * Minuscule feedback loop
 
 = Ubiquity
+
+Where can these ideas be applied?
 
  * Plugins
    At compile time or runtime as a library.
